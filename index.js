@@ -1,7 +1,7 @@
 const app = require("express")();
 const PORT = 5000;
 
-app.get("/:title", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send([
     {
       id: "1",
@@ -33,5 +33,7 @@ app.get("/:title", (req, res) => {
     },
   ]);
 });
+
+app.get("/search/:title", (req, res) => {});
 
 app.listen(PORT, () => console.log(`it's alive on http://localhost:${PORT}`));
